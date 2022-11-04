@@ -170,6 +170,19 @@
 	contains = list(/obj/item/knife/combat/survival = 3)
 	crate_name = "survival knife crate"
 
+/datum/supply_pack/service/servants
+	name = "Maid and Butler Crate"
+	desc = "Contains elegant clothing for those who strive for excellcece in service! \
+		Contains two full bulter and maid outfits, as well as one monocle."
+	cost = CARGO_CRATE_VALUE * 2.5
+	contains = list(/obj/item/clothing/under/costume/maid,
+					/obj/item/clothing/under/costume/maid,
+					/obj/item/clothing/under/costume/butler,
+					/obj/item/clothing/under/costume/butler,
+
+					/obj/item/clothing/glasses/monocle
+					)
+
 /datum/supply_pack/service/wedding
 	name = "Wedding Crate"
 	desc = "Everything you need to host a wedding! Now you just need an officiant. \

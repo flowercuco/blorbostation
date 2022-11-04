@@ -122,6 +122,16 @@
 	var/obj/item/clothing/accessory/maidcorset/A = new (src)
 	attach_accessory(A)
 
+/obj/item/clothing/under/costume/butler
+	name = "butler costume"
+	desc = "Elegance! Such ellllllegaaaaance!!!"
+	icons_state = "bulter"
+	inhand_icon_state = "bulter"
+	body_parts_covered = CHEST|GROIN|ARMS|LEGS
+	female_sprite_flags = NO_FEMALE_UNIFORM
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION_NO_NEW_ICON
+	can_adjust = FALSE
+
 /obj/item/clothing/under/costume/geisha
 	name = "geisha suit"
 	desc = "Cute space ninja senpai not included."
