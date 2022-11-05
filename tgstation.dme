@@ -4891,6 +4891,7 @@
 #include "orbstation\objects\items\cucumbers.dm"
 #include "orbstation\objects\items\dancing_pole.dm"
 #include "orbstation\objects\items\hearing_aid.dm"
+#include "orbstation\objects\items\orbfood.dm"
 #include "orbstation\objects\items\prescription_lenses.dm"
 #include "orbstation\objects\items\radio_gloves.dm"
 #include "orbstation\objects\items\spell_injectors.dm"
