@@ -11,9 +11,9 @@
 	cost = CARGO_CRATE_VALUE * 10 // Best prices this side of the galaxy.
 	contains = list(/obj/item/pizzabox/imperial_flatbread,
 					/obj/item/pizzabox/rustic_flatbread,
-					/obj/item/pizzabox/mushroom_flatbread,
-					/obj/item/pizzabox/stinging_flatbread,
-					/obj/item/pizzabox/fish_flatbread,
+					/obj/item/pizzabox/italic_flatbread,
+					/obj/item/pizzabox/rustic_flatbread,
+					/obj/item/pizzabox/italic_flatbread,
 				)
 	crate_name = "flatbread crate"
 
@@ -41,22 +41,10 @@
 					/obj/item/pizzabox/pineapple,
 					/obj/item/pizzabox/mothic_firecracker,
 					/obj/item/pizzabox/mothic_five_cheese,
-					/obj/item/pizzabox/stinging_flatbread,
-					/obj/item/pizzabox/fish_flatbread,
+					/obj/item/pizzabox/mothic_pesto,
+					/obj/item/pizzabox/imperial_flatbread,
 					/obj/item/pizzabox/rustic_flatbread,
 					/obj/item/pizzabox/italic_flatbread,
 				)
 	crate_name = "variety pizza crate"
 
-/datum/supply_pack/organic/pizzastarter
-	name = "Custom Pizza Starter Crate"
-	desc = "Support for the true warriors in the art of placing foods on top of flat dough or bread. \
-			Contains some wheat, potatoes, korta nuts, an egg carton, and a trusty rolling pin."
-	cost = CARGO_CRATE_VALUE * 2.5
-	contains = list(/obj/item/food/grown/potato = 6,
-					/obj/item/food/grown/wheat = 6,
-					/obj/item/food/grown/korta_nut =6,
-					/obj/item/storage/fancy/egg_box,
-					/obj/item/kitchen/rollingpin,
-				)
-	crate_name = "food crate"
