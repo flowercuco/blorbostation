@@ -29,16 +29,16 @@
 	. = ..()
 	if(!loaded || !(isliving(target) && proximity_flag) )
 		return
-	if(!isanimal(target))
-		to_chat(user, span_info("[src] is only effective on lesser beings."))
+	if(!isanimal_or_basicmob(target))
+		balloon_alert(user, "too complex!")
 		return
 
 	var/mob/living/simple_animal/target_animal = target
 	if(target_animal.sentience_type != revive_type)
-		to_chat(user, span_info("[src] does not work on this sort of creature."))
+		balloon_alert(user, "can't be revived!")
 		return
 	if(target_animal.stat != DEAD)
-		to_chat(user, span_info("[src] is only effective on the dead."))
+		balloon_alert(user, "still alive!")
 		return
 
 	target_animal.faction = list("neutral")
