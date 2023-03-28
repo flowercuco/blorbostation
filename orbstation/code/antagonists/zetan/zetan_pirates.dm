@@ -11,6 +11,7 @@
 		TO SOOTHE OUR ACHING STOMACS. $PAYOFF PLEASE OR YOURE FUCKED."
 	possible_answers = list("Pay them off","Risk it all")
 
+	arrival_announcement = "WE ARE BLASTING OUR THEME SONG AT MAX VOLUME NOW"
 	response_received = "FUCK YES KID."
 	response_too_late = "THANK YOU SO MUCH FOR YOUR OFFER BUT!"
 	response_not_enough = "YOUR NAME IS CARVED ON A WALL IN HELL."
@@ -23,8 +24,8 @@
 /obj/effect/mob_spawn/ghost_role/human/pirate/zetan
 	name = "alien sleeper"
 	desc = "An alien sleeping. Maybe? Are they watching you?"
-	flavour_text = "The station refused to pay for your protection, protect the ship, siphon the credits from the station and raid it for even more loot.\
-					And if you can't find enough cash there's always abducting people!"
+	flavour_text = "The station did not give you cash you gotta go in there and get as much cash as possible. \
+					Protect the ship and go grab people and put them in the experimentor NOW. Remember to check the lockers."
 	density = FALSE
 	icon = 'icons/obj/machines/sleeper.dmi'
 	icon_state = "sleeper"
@@ -174,8 +175,8 @@
 	do_teleport(target, dumpzone, asoundout = 'sound/weapons/zapbang.ogg')
 	say(pick(winquotes))
 
-	if(target.stat != CONSCIOUS)
-		target.heal_and_revive(0, "[target] appears in a flash of squeaky light, more emotionally harmed than ever before, but no worse for wear.")
+	target.adjustOxyLoss(-100, FALSE)
+	target.heal_and_revive(0, "[target] appears in a flash of squeaky light, more emotionally harmed than ever before, but no worse for wear.")
 
 /obj/machinery/zetan_pirate_experimentor/proc/spit_cash(cashpath, cashamount)
 	for(var/I in 1 to cashamount)
