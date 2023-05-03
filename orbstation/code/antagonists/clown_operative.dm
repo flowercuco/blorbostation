@@ -10,13 +10,35 @@
 	preview_outfit = /datum/outfit/clown_operative
 	preview_outfit_behind = null
 	nuke_icon_state = "bananiumbomb_base"
+	var/funny_name
 
 /datum/antagonist/nukeop/clownop/lone/forge_objectives()
 	objectives += new /datum/objective/funny_lone_operative
 
 /datum/antagonist/nukeop/clownop/lone/give_alias()
-	var/funny_name = pick("Honker", "Slipper", "Pie Tosser", "Waddler", "Da Joker", "Jester", "Banana Enthusiast")
+	funny_name = pick("Honker", "Slipper", "Pie Tosser", "Waddler", "Da Joker", "Jester", "Banana Enthusiast")
 	owner.current.real_name = "Syndicate [funny_name]"
+
+/datum/antagonist/nukeop/clownop/lone/roundend_report()
+	var/list/parts = list()
+	parts += "<span class='header'>[funny_name] Circus Operatives:</span>"
+	var/text = "<br><span class='header'>The syndicate clown operatives were:</span>"
+	var/purchases = ""
+	var/used_telecrystals = 0
+	LAZYINITLIST(GLOB.uplink_purchase_logs_by_key)
+	var/datum/uplink_purchase_log/purchase_log = GLOB.uplink_purchase_logs_by_key[owner.key]
+	if(purchase_log)
+		used_telecrystals = purchase_log.total_spent
+		purchases += purchase_log.generate_render(FALSE)
+	text += printplayerlist(owner)
+	text += "<br>"
+	text += "(Circus used [used_telecrystals] TC) [purchases]"
+	if(used_telecrystals == 0)
+		text += "<BIG>[icon2html('icons/ui_icons/antags/badass.dmi', world, "badass")]</BIG>"
+
+	parts += text
+
+	return "<div class='panel redborder'>[parts.Join("<br>")]</div>"
 
 // Outfit for lone clown operative
 /datum/outfit/syndicate/clownop/lone
