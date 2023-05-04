@@ -5272,6 +5272,7 @@
 #include "orbstation\code\antagonists\blood_brothers.dm"
 #include "orbstation\code\antagonists\clown_operative.dm"
 #include "orbstation\code\antagonists\contract_killer.dm"
+#include "orbstation\code\antagonists\fluff_objective.dm"
 #include "orbstation\code\antagonists\grand_ritual.dm"
 #include "orbstation\code\antagonists\lone_operative.dm"
 #include "orbstation\code\antagonists\mindshield.dm"
